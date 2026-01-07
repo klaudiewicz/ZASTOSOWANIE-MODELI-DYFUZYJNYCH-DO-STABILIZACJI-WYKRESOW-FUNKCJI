@@ -67,7 +67,18 @@ Poniższe drzewo przedstawia organizację plików w repozytorium wraz z krótkim
 Analiza porównawcza szumu i klasycznych metod filtracji.
 
 * **`rodzaje_szumu.ipynb`**: Wizualizacja szumu dyskretnego, gaussowskiego i dyfuzyjnego (manifold).
+<div align="center">
+
+  <img src="assets/noise_types.png" alt="Reprezentacja szumu manifold" width="80%">
+
+</div>
 * **`istniejace_narzedzia.ipynb`**: Implementacje referencyjne: Filtr Savitzky'ego-Golaya, Procesy Gaussowskie (GP), Splajny, Autoenkoder (AE).
+
+<div align="center">
+
+  <img src="assets/classical_methods.png" alt="Przegląd dostępnych narzędzi" width="80%">
+
+</div>
 
 ### 2. Konwolucyjny Model Dyfuzyjny (CNN 1D)
 
@@ -81,7 +92,7 @@ Główna część badawcza. Wykorzystuje sieci konwolucyjne 1D do zachowania lok
 
   <img src="assets/1d_reconstruction.png" alt="Rekonstrukcja sygnału 1D" width="80%">
 
-  <br><em>Porównanie rekonstrukcji sygnału przez model dyfuzyjny i metody klasyczne.</em>
+  <br><em>Rekonstrukcja funkcji trygonometrycznej przez model dyfuzyjny.</em>
 
 </div>
 
@@ -135,6 +146,14 @@ W projektach wykorzystano schemat **DDPM**:
 | **Savitzky-Golay** | *do uzupełnienia* | |
 | **Autoenkoder (DAE)** |*do uzupełnienia*  | |
 | **Model Dyfuzyjny** | *do uzupełnienia*  | |
+
+<div align="center">
+
+  <img src="assets/wynik_porownania.png" alt="Porównanie dostępnych narzędzi z modelem dyfuzyjnym" width="90%">
+
+  <br><em>Porównanie dostępnych narzędzi z modelem dyfuzyjnym.</em>
+
+</div>
 
 ---
 
