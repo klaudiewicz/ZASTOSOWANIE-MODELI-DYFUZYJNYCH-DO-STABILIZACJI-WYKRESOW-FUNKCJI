@@ -72,7 +72,8 @@ Analiza porównawcza szumu i klasycznych metod filtracji.
   <img src="assets/noise_types.png" alt="Reprezentacja szumu manifold" width="80%">
 
 </div>
-* **`istniejace_narzedzia.ipynb`**: Implementacje referencyjne: Filtr Savitzky'ego-Golaya, Procesy Gaussowskie (GP), Splajny, Autoenkoder (AE).
+
+* **`istniejace_narzedzia.ipynb`**: Filtr Savitzky'ego-Golaya, Procesy Gaussowskie (GP), Splajny, Autoenkoder (AE).
 
 <div align="center">
 
@@ -126,16 +127,17 @@ Implementacja dydaktyczna procesu dyfuzji (Forward & Reverse) na prostych danych
 
 W projektach wykorzystano schemat **DDPM**:
 
-1.  **Forward Process ($q$)**: Stopniowe dodawanie szumu Gaussa do danych w $T$ krokach, aż do uzyskania czystego szumu izotropowego $\mathcal{N}(0, I)$.
+1. **Forward Process ($q$)**: Stopniowe dodawanie szumu Gaussa do danych w $T$ krokach, aż do uzyskania czystego szumu izotropowego $\mathcal{N}(0, I)$.
 
-    $$q(x_t | x_{t-1}) = \mathcal{N}(x_t; \sqrt{1 - \beta_t} x_{t-1}, \beta_t I)$$
+$$q(x_t | x_{t-1}) = \mathcal{N}(x_t; \sqrt{1-\beta_t}\,x_{t-1}, \beta_t I)$$
 
-2.  **Reverse Process ($p_\theta$)**: Sieć neuronowa uczona jest przewidywać szum $\epsilon_\theta$ dodany w danym kroku $t$, co pozwala na iteracyjne odtwarzanie oryginalnego sygnału.
+2. **Reverse Process ($p_\theta$)**: Sieć neuronowa uczona jest przewidywać szum $\epsilon_\theta$ dodany w danym kroku $t$, co pozwala na iteracyjne odtwarzanie oryginalnego sygnału.
 
-    $$x_{t-1} = \frac{1}{\sqrt{\alpha_t}} \left( x_t - \frac{1-\alpha_t}{\sqrt{1-\bar{\alpha}_t}} \epsilon_\theta(x_t, t) \right) + \sigma_t z$$
+$$x_{t-1} = \frac{1}{\sqrt{\alpha_t}}
+\left( x_t - \frac{1-\alpha_t}{\sqrt{1-\bar{\alpha}_t}}
+\,\epsilon_\theta(x_t,t) \right) + \sigma_t z$$
 
 3.  **Time Embeddings**: Istotny element architektury, pozwalający sieci rozróżniać poziom zaszumienia sygnału. Dzięki temu jedna sieć obsługuje zarówno mocno zaszumione (początek generowania), jak i prawie czyste sygnały (finiszowanie).
-
 ---
 
 
