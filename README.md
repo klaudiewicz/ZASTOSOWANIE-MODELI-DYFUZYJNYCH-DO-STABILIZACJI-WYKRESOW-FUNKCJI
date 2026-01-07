@@ -62,7 +62,7 @@ Poniższe drzewo przedstawia organizację plików w repozytorium wraz z krótkim
 
 ### 1. Podstawy Teoretyczne i Benchmarking
 
-> *Katalog główny*
+> Katalog główny
 
 Analiza porównawcza szumu i klasycznych metod filtracji.
 
@@ -71,7 +71,7 @@ Analiza porównawcza szumu i klasycznych metod filtracji.
 
 ### 2. Konwolucyjny Model Dyfuzyjny (CNN 1D)
 
-> *Katalog: `konwolucyjny-model-dyfuzyjny/*`
+> Katalog: `konwolucyjny-model-dyfuzyjny/*`
 
 Główna część badawcza. Wykorzystuje sieci konwolucyjne 1D do zachowania lokalnych zależności w sygnale oraz **Sinusoidal Positional Embeddings**.
 
@@ -87,7 +87,7 @@ Główna część badawcza. Wykorzystuje sieci konwolucyjne 1D do zachowania lok
 
 ### 3. Model Dyfuzyjny 2D (CNN 2D)
 
-> *Katalog: `konwolucyjny-model-dyfuzyjny-2d/*`
+> Katalog: `konwolucyjny-model-dyfuzyjny-2d/*`
 
 Rozszerzenie koncepcji na pola skalarne.
 
@@ -104,7 +104,7 @@ Rozszerzenie koncepcji na pola skalarne.
 
 ### 4. Prosty Model Dyfuzyjny (MLP)
 
-> *Katalog: `prosty-model-dyfuzyjny/*`
+> Katalog: `prosty-model-dyfuzyjny/*`
 
 Implementacja dydaktyczna procesu dyfuzji (Forward & Reverse) na prostych danych 1D przy użyciu sieci w pełni połączonej (MLP). Służyła do weryfikacji poprawności algorytmu DDPM.
 
