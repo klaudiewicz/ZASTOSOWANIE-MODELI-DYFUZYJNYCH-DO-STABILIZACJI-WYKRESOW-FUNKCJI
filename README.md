@@ -13,7 +13,7 @@
 <p align="center">
   <img src="assets/banner_diffusion.gif" alt="Animacja procesu dyfuzji" width="80%">
   <br>
-  <em>Wizualizacja procesu odwracania dyfuzji (Reverse Process) dla funkcji 1D.</em>
+  <em>Wizualizacja procesu zaszumiania funkcji 1D.</em>
 </p>
 
 </div>
